@@ -11,3 +11,8 @@ TODO:
 - Shop {}
 - Stats/MySQL {}
 - Other Stuff {}
+
+Authors:
+_____________
+- BenCS
+- Legend
