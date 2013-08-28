@@ -1,5 +1,13 @@
 Payday
--------------
+==============
 <br>
 MinecraftUniverse Development Team
-__________
+--------------
+______________
+<br>
+TODO:
+- Arenas {}
+- Game {}
+- Shop {}
+- Stats/MySQL {}
+- Other Stuff {}
