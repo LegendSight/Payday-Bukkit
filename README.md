@@ -17,4 +17,4 @@ Authors:
 _____________
 - BenCS (Head-Dev)
 - Legend (Co-Dev)
-- AntHQ (Contributor)
+- AntHQ (Helper)
