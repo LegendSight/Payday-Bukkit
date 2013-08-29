@@ -10,6 +10,7 @@ TODO:
 - Game {}
 - Shop {}
 - Stats/MySQL {}
+- Spectation {}
 - Other Stuff {}
 
 Authors:
