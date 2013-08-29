@@ -1,4 +1,4 @@
-Payday
+Payday Alpha v1.0
 ==============
 <br>
 MinecraftUniverse Development Team
