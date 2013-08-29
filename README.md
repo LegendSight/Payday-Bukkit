@@ -15,5 +15,6 @@ TODO:
 Authors:
 --------------
 _____________
-- BenCS
-- Legend
+- BenCS (Head-Dev)
+- Legend (Co-Dev)
+- AntHQ (Contributor)
