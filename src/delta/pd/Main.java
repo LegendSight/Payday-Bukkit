@@ -1,6 +1,9 @@
 package delta.pd;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.logging.Logger;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -10,6 +13,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import delta.pd.command.PD;
+import delta.pd.sql.SQL;
 
 public class Main extends JavaPlugin implements Listener {
 
@@ -36,6 +40,8 @@ public class Main extends JavaPlugin implements Listener {
     public File spawnFile;
     public FileConfiguration Spawns;
 	
+    Logger log = Bukkit.getLogger();
+    
 	@Override
 	public void onEnable() {
 		
@@ -69,6 +75,25 @@ public class Main extends JavaPlugin implements Listener {
 		
 		getCommand("pd").setExecutor(new PD());
 		
+        try {
+            this.checkDatabase();
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            log.severe("Connection failed. Defaulting to SQLite.");
+            this.Config.set("MySQL.Enable", false);
+        }
+		
 	}
+	
+    public void checkDatabase() throws SQLException, ClassNotFoundException {
+
+        Connection con = null;
+
+        con = SQL.getConnection();
+
+        con.createStatement().execute("CREATE TABLE IF NOT EXISTS payday(username VARCHAR(255), kills INTEGER, deaths INTEGER, heists INTEGER, money INTEGER)");
+
+    }
 	
 }

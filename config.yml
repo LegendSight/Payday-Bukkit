@@ -1,3 +1,13 @@
 ###############################
 #           PAYDAY            #
 ###############################
+
+# Boring MySQL Shit
+MySQL:
+  Enable: false
+  Address: localhost
+  Port: 3306
+  Database: payday
+  Username: root
+  Password: pass
+# Arena Settings  
